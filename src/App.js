@@ -1,25 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { fetchData } from './Data/data';
+import Cat from './Cat';
+import {useState , useEffect} from "react"
+
+// const array = fetchData()
+
+// const [fact, setFact] = useState(fetchData())
+
+
+// useEffect(()=>{
+//   fetchData()
+// },[])
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+      <Cat fact={fact}/>
+      </>
     </div>
   );
 }
 
 export default App;
+
+
+console.log(fetchData())
